@@ -1,0 +1,130 @@
+<html>
+
+<head>
+    <title>The Coronavirus</title>
+    <link rel="stylesheet" href="theme.css" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="sticky">
+        <div class="header">
+            <h1>Info Checker</h1>
+            <img id=logo src="Images/icon.png" style=width:6.5%>
+        </div>
+
+        <nav>
+
+            <div class="dropdown_div">
+                <a href="index.html" class="dropdown_button"><i class="fa fa-home" style="font-size: 20px;"></i> Home</a>
+            </div>
+
+            <div class="dropdown_div">
+                <button class="dropdown_button"><i class="fa fa-info-circle" style="font-size: 18px;"></i> General Information</button>
+                <div class="dropdown_content">
+                    <a href="general.html"><b>General Information</b></a>
+                    <a href="general.html#what">What Is Misinformation</a>
+                    <a href="general.html#avoid">How To Avoid Misinformation</a>
+                    <a href="examples.html"><b>Examples Of Misinformation</b></a>
+                </div>
+            </div>
+
+            <div class="dropdown_div">
+                <button class="dropdown_button"><i class="fa fa-newspaper-o" style="font-size: 15.5px;"></i> Editors' Picks</button>
+                <div class="dropdown_content">
+                    <a href="reputable.html"><b>Reputable Sources</b></a>
+                    <a href="bib.html"><b>Bibliography</b></a>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="slideshow_div1">
+                <img class="slides" src="Images/MC1.jpg" >
+                <img class="slides" src="Images/istock_1215063494.jpg" >
+                <img class="slides" src="Images/MC3.jpg">
+            </div>
+
+            <script type="text/javascript">
+                var myIndex = 0;
+                function slideshow() {
+                    var item;
+                    var slides = document.getElementsByClassName("slides");
+                    for (item = 0; item < slides.length; item++) {
+                        //slides[item].style.display = "none";
+                        slides[item].classList.remove("shown"); //removes the class shown which makes it show up
+                    }
+                    myIndex++;
+                    if (myIndex > slides.length) {
+                        myIndex = 1;
+                    }
+                    // slides[myIndex - 1].style.display = "block";
+                    slides[myIndex - 1].classList.add("shown"); //adds the class shown which makes it show up
+                    setTimeout(slideshow, 4000);
+                }
+                slideshow();
+            </script>
+
+            <div id="text-block1">
+                <h1 style="padding-left: 25px; padding-right: 25px;">Examples of Misinformation</h1>
+            </div>
+        </div>
+    </main>
+
+    <div class="wrapper">
+        <div class="content">
+            <div class="vertical-menu">
+                <section id="red">
+                <a class="activered">Content On This Page:</a>
+               </section>
+                <a href="#elderly">Anti-Vaxxers</a>
+                <a href="#flu">Flat Earthers</a>
+                <a href="#mask">Fake News</a>
+                <a href="#bio">COVID-19</a>
+              </div>
+            <h3 id="elderly">Anti-Vaxxers</h3>
+            <p>Anti-Vaxxers have become a major issue recently, as people have been neglecting to get vaccinations for diseases that have been long dead, giving them a chance to come back. Vaccinations don’t have side effects that go unmentioned, and they are safe. This is an example of how misinformation can affect other people, as it is directly linked to diseases that haven’t been a problem for decades returning. 
+                </p>
+            <img class="contentimg" src="Images/IF7FBYGZV5HPTIQ2NBIVSRFJV4.jpg" alt="Coronavirus" style="width:50%">
+            <div>
+                <h3 id="flu">Flat Earthers</h3>
+                <p> The earth being flat is a common conspiracy theory that is very prevalent on the internet. The earth is round, not flat. There are plenty of scientific reasons for why the earth is round. 
+                </p>
+                <img class="contentimg" src="Images/191115123649-03-flat-earth-movement-restricted-super-169.jpg" alt="Coronavirus" style="width:70%">
+            </div>
+            <h3 id="mask">Fake News</h3>
+            <p>Fake news is terminology that was commonly used by the former president of the USA, Donald Trump. This term is extremely broad and misleading, to the point where the British government banned the term. The problem with fake news as a term is that Trump has changed it’s meaning, and is often just used when the media is reporting on an issue that someone doesn’t agree with now. 
+
+            </p>
+            <img class="contentimg" src="Images/X5TDSC3GQRMKZAHJ4HGFJGNTJE.jpg" alt="Mask" style="width: 70%;">
+            <h3 id="bio">COVID-19</h3>
+            <p>Covid 19 has many rumours and theories around it. Some of the rumours have to do with the vaccine. The Vaccine is safe under the vast majority of medical conditions. Get it as soon as possible if you can, to protect yourself and the small minority that cannot get it. 
+            </p>
+            <img src="Images/novelcoronavirus-optimized.webp" alt="Antibiotics" style="width: 70%;">
+            <section class="mythsButtonContainer">
+                <a href="reputable.html" class="button3">Reputable Sources</a>
+            </section>
+            <!--NEW-->
+        </div>
+        <!--OLD<a href="have.html" class="button3">If You Have It</a>-->
+    </div>
+
+    </div>
+    </div>
+    </div>
+
+
+
+    <script src="https://covid19api-api.glitch.me/api.js"></script>
+</body>
+
+</html>

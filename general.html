@@ -1,0 +1,130 @@
+<html>
+
+<head>
+    <title>The Coronavirus</title> 
+    <link rel="stylesheet" href="theme.css" type="text/css" />
+    <link rel="shortcut icon" href="logotrans.png" />
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="sticky">
+        <div class="header">
+            <h1>Info Checker</h1>
+            <img id=logo src="Images/icon.png" style=width:6.5%>
+        </div>
+
+        <nav>
+
+            <div class="dropdown_div">
+                <a href="index.html" class="dropdown_button"><i class="fa fa-home" style="font-size: 20px;"></i> Home</a>
+            </div>
+
+            <div class="dropdown_div">
+                <button class="dropdown_button"><i class="fa fa-info-circle" style="font-size: 18px;"></i> General Information</button>
+                <div class="dropdown_content">
+                    <a href="general.html"><b>General Information</b></a>
+                    <a href="general.html#what">What Is Misinformation</a>
+                    <a href="general.html#avoid">How To Avoid Misinformation</a>
+                    <a href="examples.html"><b>Examples Of Misinformation</b></a>
+                </div>
+            </div>
+
+            <div class="dropdown_div">
+                <button class="dropdown_button"><i class="fa fa-newspaper-o" style="font-size: 15.5px;"></i> Editors' Picks</button>
+                <div class="dropdown_content">
+                    <a href="reputable.html"><b>Reputable Sources</b></a>
+                    <a href="bib.html"><b>Bibliography</b></a>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="slideshow_div1">
+                <img class="slides" src="Images/misinformation_7_2x1.webp" >
+                <img class="slides" src="Images/covid-19_Story_Banner_revised.jpg" >
+                <img class="slides" src="Images/file-20200811-16-3biowr.webp" >
+            </div>
+
+            <script type="text/javascript">
+                var myIndex = 0;
+                function slideshow() {
+                    var item;
+                    var slides = document.getElementsByClassName("slides");
+                    for (item = 0; item < slides.length; item++) {
+                        //slides[item].style.display = "none";
+                        slides[item].classList.remove("shown"); //removes the class shown which makes it show up
+                    }
+                    myIndex++;
+                    if (myIndex > slides.length) {
+                        myIndex = 1;
+                    }
+                    // slides[myIndex - 1].style.display = "block";
+                    slides[myIndex - 1].classList.add("shown"); //adds the class shown which makes it show up
+                    setTimeout(slideshow, 4000);
+                }
+                slideshow();
+            </script>
+
+            <div class="text-block">
+                <h1 class="lol">General Information</h1>
+            </div>
+        </div>
+    </main>
+
+    <div class="wrapper">
+        <div class="content">
+            <div class="vertical-menu">
+                <a class="active">What's On This Page:</a>
+                <a href="#what">What Is Misinformation</a>
+                <a href="#avoid">How To Avoid Misinformation</a>
+              </div>
+            <h2 id="what">What Is Misinformation?</h2>
+            <p><u>Misinformation:</u> “false or inaccurate information, especially that which is deliberately intended to deceive.”
+
+                <br><br>Misinformation has plagued the world long before it was even a part of anyone’s vocabulary. Governments, social media influencers and many 
+                workplaces have been targeted with misinformation and it is easily spread due to the nature of the online world. 
+                </p>
+            <img class="contentimg" src="Images/stack-of-newspaper-scaled.jpg" alt="Coronavirus" style="width:30%">
+            <div>
+                <h2 id="avoid">How To Avoid and Identify Misinformation?</h2>
+                <p>- Many pieces of information can be easy fact-checked with a google search <br>
+                    - Spelling/Grammatical error can indicate unreliable information<br>
+                    - Check the source, are they reliable, does the publisher or journalist have a history of bias<br>
+                    
+                    - Why was it sent? Could there be alternative biases for writing the piece?<br>
+                    Check for other sources reporting the same news, cross-check multiple sources. Do these other 
+                    - sources approve or disapprove of the original source?<br><br>
+                    
+                    - Don’t rely on social media for important news<br>
+                    - Pay extra attention to emotionally charged topics <br>
+                    - Investigate what you are reading
+                    </p>
+                <img class="contentimg" src="Images/stack-of-newspapers-1024x683.jpg" alt="Coronavirus">
+            </div>
+            <!--NEW-->
+            <section class="mythsButtonContainer">
+                <a href="examples.html" class="button2">Examples of Misinformation</a>
+            </section>
+            <!--NEW-->
+        </div>
+        <!--OLD<a href="myths.html" class="button2">Myths About Covid-19</a>-->
+    </div>
+    </div>
+    </div>
+
+    <script src="https://covid19api-api.glitch.me/api.js"></script>
+</body>
+
+</html>

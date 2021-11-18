@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <title>The Coronavirus</title>
+    <link rel="stylesheet" href="theme.css" type="text/css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="sticky">
+        <div class="header">
+            <h1>Info Checker</h1>
+            <img id=logo src="Images/icon.png" style=width:6.5%>
+        </div>
+
+        <nav>
+
+            <div class="dropdown_div">
+                <a href="index.html" class="dropdown_button"><i class="fa fa-home" style="font-size: 20px;"></i> Home</a>
+            </div>
+
+            <div class="dropdown_div">
+                <button class="dropdown_button"><i class="fa fa-info-circle" style="font-size: 18px;"></i> General Information</button>
+                <div class="dropdown_content">
+                    <a href="general.html"><b>General Information</b></a>
+                    <a href="general.html#what">What Is Misinformation</a>
+                    <a href="general.html#avoid">How To Avoid Misinformation</a>
+                    <a href="examples.html"><b>Examples Of Misinformation</b></a>
+                </div>
+            </div>
+
+            <div class="dropdown_div">
+                <button class="dropdown_button"><i class="fa fa-newspaper-o" style="font-size: 15.5px;"></i> Editors' Picks</button>
+                <div class="dropdown_content">
+                    <a href="reputable.html"><b>Reputable Sources</b></a>
+                    <a href="bib.html"><b>Bibliography</b></a>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="slideshow_div1">
+                <img class="slides" src="Images/">
+                <img class="slides" src="Images/">
+                <img class="slides" src="Images/">
+            </div>
+
+            <script type="text/javascript">
+                var myIndex = 0;
+                function slideshow() {
+                    var item;
+                    var slides = document.getElementsByClassName("slides");
+                    for (item = 0; item < slides.length; item++) {
+                        //slides[item].style.display = "none";
+                        slides[item].classList.remove("shown"); //removes the class shown which makes it show up
+                    }
+                    myIndex++;
+                    if (myIndex > slides.length) {
+                        myIndex = 1;
+                    }
+                    // slides[myIndex - 1].style.display = "block";
+                    slides[myIndex - 1].classList.add("shown"); //adds the class shown which makes it show up
+                    setTimeout(slideshow, 4000);
+                }
+                slideshow();
+            </script>
+
+            <div id="text-block-area">
+                <h1>Bibliography</h1>
+            </div>
+        </div>
+    </main>
+
+    <div class="wrapper">
+        <div class="content">
+            <h6 id="ban" >List Of Australian Travel Bans</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus quis lectus a dapibus. Nunc vitae justo non 
+                est sagittis pretium sit amet ac mi. Nullam non dapibus sem. Cras sollicitudin at libero sit amet pharetra. Morbi quis
+                 tincidunt felis, at lobortis est. Nullam bibendum ligula eget velit viverra, eu aliquam sapien varius. Sed diam nisl, 
+                 lacinia ac bibendum et, mattis eget orci. Nulla tortor dolor, pulvinar eu sapien non, pulvinar viverra orci. Nam lacinia 
+                 elit a iaculis vulputate. Nam convallis varius urna vel fringilla.
+            </a>.
+            </p>
+            <img src="Images/" alt="Lorum Ipsum" style="width:100%">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://covid19api-api.glitch.me/api.js"></script>
+</body>
+
+</html>
